@@ -1,8 +1,10 @@
 <?php
 
-require 'constructorConsulta.php';
+require '../controladores/permisos.php';
 
-$chofer = new Builder("chofer");
-$chofer->eliminarTabla();
-$chofer->crearTabla([]);
+$permiso = Permiso::buscar(1);
+//$permiso->nombre = "Chofer";
+//$permiso->guardar();
+echo $permiso->nombre;
+$permiso->eliminar();
 ?>
