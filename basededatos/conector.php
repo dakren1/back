@@ -25,7 +25,7 @@ class Conector{
     function sentencia($sql)
     {
         if(!$this->conexion->query($sql)){
-            echo "Fallo en la sentencia";
+            echo "Fallo en la sentencia".$this->conexion->error;
         }
     }
 
